@@ -28,7 +28,7 @@
 
 <body style="margin: 0; width: 100vw; height: 100vh; font-family:
 'Product Sans'" id="game_frame" class="gameframe">
-<div style="position: fixed; width: 100%; height: 50px; background-color: rgb(43, 43, 43);">
+<div id="S" style="position: fixed; width: 100%; height: 50px; background-color: rgb(43, 43, 43);">
 	<h1 style="transform: scale(0.8); top: -15px; position: absolute;">Precision Client</h1>
 </div>
 	<div id="Selection"
@@ -101,6 +101,7 @@
 				if (PackSelect.selectedIndex !== 0) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
+					document.getElementById("S").style.display = "none";
 					localStorage.LastPack = Selected;
 					const relayId = Math.floor(Math.random() * 3);
 					window.eaglercraftOpts = {
